@@ -1,3 +1,3 @@
-export default function Home() {
-  return <h1>ساخت یک قالب فروشگاهی</h1>;
-}
+import { HomePage } from "$/lib/ui/components/template";
+
+export default HomePage;
