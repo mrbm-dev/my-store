@@ -3,11 +3,9 @@ import {
   Avatar,
   Badge,
   Box,
-  Button,
   InputBase,
   Paper,
   Toolbar,
-  Typography,
 } from "@mui/material";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -17,11 +15,16 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import CategoryOutlinedIcon from "@mui/icons-material/CategoryOutlined";
 // import { TopBar } from "./TopBar";
 import { useSelector } from "react-redux";
-import { ButtonMenu, CategoryMenu, CustomDrawer, ScrollHide } from "$/lib/ui";
+import {
+  ButtonMenu,
+  CategoryMenu,
+  CustomDrawer,
+  LoginDialog,
+  ScrollHide,
+} from "$/lib/ui";
 import { useState } from "react";
 import Image from "next/image";
 import styled from "@emotion/styled";
-// import { LoginDialog } from "../../organism/dialogs";
 
 export function AppBarHeaderHide() {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -172,7 +175,7 @@ export function AppBarHeaderHide() {
             openDrawer={openDrawer}
             onClose={() => setOpenDrawer(false)}
           />
-          {/* <LoginDialog onClose={clickCloseDialog} open={openDialog} /> */}
+          <LoginDialog onClose={clickCloseDialog} open={openDialog} />
         </Toolbar>
       </AppBar>
     </ScrollHide>
