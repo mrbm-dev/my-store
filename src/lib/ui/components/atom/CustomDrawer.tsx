@@ -1,9 +1,8 @@
-import React from "react";
 import { Box, Divider, Drawer, Typography } from "@mui/material";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 // import { ShoppingCard } from "../surfaces/ShoppingCard";
 import { useSelector } from "react-redux";
-import { ButtonMenu } from "./menu";
+import { LoginButton } from "../molecule";
 // import { selectCart } from "../../store/slice/cart-slice";
 
 interface CustomDrawerProps {
@@ -72,20 +71,8 @@ export function CustomDrawer(props: CustomDrawerProps) {
               padding: "10px",
             }}
           >
-            <ButtonMenu
-              variant="contained"
-              showIconButton={false}
-              style={{ width: "100%", textTransform: "none" }}
-            >
-              Checkout Now (${})
-            </ButtonMenu>
-            <ButtonMenu
-              variant="outlined"
-              showIconButton={false}
-              style={{ width: "100%", textTransform: "none" }}
-            >
-              View Cart
-            </ButtonMenu>
+            <LoginButton label={` پرداخت کنید (${0})`} />
+            <LoginButton variant="outlined" label="مشاهده سبد خرید" />
           </Box>
         </Box>
       </Drawer>

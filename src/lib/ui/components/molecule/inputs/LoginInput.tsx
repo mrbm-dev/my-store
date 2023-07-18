@@ -15,6 +15,7 @@ interface LoginInputProps {
   placeholder: string;
   id: string;
   showPasswordIcon: boolean;
+  required: boolean;
 }
 export function LoginInput(props: LoginInputProps) {
   const [showPassword, setShowPassword] = useState(false);
@@ -34,6 +35,7 @@ export function LoginInput(props: LoginInputProps) {
       <UserName
         id={props.id}
         placeholder={props.placeholder}
+        required={props.required}
         type={showPassword || !props.showPasswordIcon ? "text" : "password"}
         endAdornment={
           props.showPasswordIcon && (

@@ -10,24 +10,28 @@ export function RegisterForm() {
         placeholder="ابراهیم هادی"
         id="full-name"
         showPasswordIcon={false}
+        required={true}
       />
       <LoginInput
         inputLabel="ایمیل / شماره تماس"
         placeholder="example@mail.com"
         id="email-phone-number"
         showPasswordIcon={false}
+        required={true}
       />
       <LoginInput
         inputLabel="رمز عبور"
         placeholder="**********"
         id="password"
         showPasswordIcon={true}
+        required={true}
       />
       <LoginInput
         inputLabel="تایید رمز عبور"
         placeholder="**********"
         id="re-type-password"
         showPasswordIcon={true}
+        required={true}
       />
       <Grid
         container

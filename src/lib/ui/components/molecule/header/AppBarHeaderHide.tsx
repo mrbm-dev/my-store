@@ -15,13 +15,8 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import CategoryOutlinedIcon from "@mui/icons-material/CategoryOutlined";
 // import { TopBar } from "./TopBar";
 import { useSelector } from "react-redux";
-import {
-  ButtonMenu,
-  CategoryMenu,
-  CustomDrawer,
-  LoginDialog,
-  ScrollHide,
-} from "$/lib/ui";
+import { ButtonMenu, CategoryMenu, CustomDrawer, ScrollHide } from "$/lib/ui";
+import { LoginDialog } from "$/lib/ui/components/organism";
 import { useState } from "react";
 import Image from "next/image";
 import styled from "@emotion/styled";
