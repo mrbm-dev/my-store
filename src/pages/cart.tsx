@@ -1,1 +1,3 @@
-export default <h1>Cart</h1>;
+import { CartPage } from "$/lib/ui";
+
+export default CartPage;

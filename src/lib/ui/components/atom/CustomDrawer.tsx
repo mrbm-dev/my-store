@@ -3,6 +3,8 @@ import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 // import { ShoppingCard } from "../surfaces/ShoppingCard";
 import { useSelector } from "react-redux";
 import { LoginButton } from "../molecule";
+import { useRouter } from "next/router";
+import { useCallback } from "react";
 // import { selectCart } from "../../store/slice/cart-slice";
 
 interface CustomDrawerProps {
@@ -10,9 +12,17 @@ interface CustomDrawerProps {
   onClose: () => void;
 }
 export function CustomDrawer(props: CustomDrawerProps) {
+  //hooks
+  const router = useRouter();
   // const cart = useSelector(selectCart);
   // const cartQuantity = cart.totalQuantity;
   // const cartItem = cart.items;
+
+  //callback
+  const goToCartPage = useCallback(() => {
+    router.push("/cart");
+  }, []);
+
   return (
     <>
       <Drawer
@@ -72,7 +82,11 @@ export function CustomDrawer(props: CustomDrawerProps) {
             }}
           >
             <LoginButton label={` پرداخت کنید (${0})`} />
-            <LoginButton variant="outlined" label="مشاهده سبد خرید" />
+            <LoginButton
+              variant="outlined"
+              label="مشاهده سبد خرید"
+              onClick={goToCartPage}
+            />
           </Box>
         </Box>
       </Drawer>

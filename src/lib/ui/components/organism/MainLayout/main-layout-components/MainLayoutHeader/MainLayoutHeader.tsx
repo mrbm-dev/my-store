@@ -3,7 +3,7 @@ import { Box, CssBaseline, Toolbar } from "@mui/material";
 
 export function MainLayoutHeader() {
   return (
-    <Box>
+    <Box mb={20}>
       <CssBaseline />
       <Toolbar />
       <AppBarHeaderHide />

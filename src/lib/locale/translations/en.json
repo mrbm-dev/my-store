@@ -1,0 +1,16 @@
+{
+    "app":{
+        "name":"نام فروشگاه",
+        "pageNotFound":"صفحه مورد نظر یافت نشد |404"
+    },
+    "header":{
+        "allCategory":"همه دسته‌بندی‌ها",
+        "searchingFor":"جستجو",
+        "categories":"دسته‌بندی‌ها",
+        "menus":{},
+        "drawer":{
+            "item":"مورد"
+        }
+    }
+
+}

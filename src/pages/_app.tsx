@@ -7,6 +7,8 @@ import "$/globals.css";
 import { NextIntlProvider } from "next-intl";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { CacheProvider } from "@emotion/react";
+import { cacheRtl } from "$/utils";
 
 export default function App({ Component, pageProps }: AppProps) {
   const { locale } = useRouter();
@@ -15,12 +17,14 @@ export default function App({ Component, pageProps }: AppProps) {
     setRtl(locale === "fa" ? true : false);
   }, [locale]);
   return (
-    <ThemeProvider theme={theme}>
-      {/* <NextIntlProvider messages={pageProps.messages}> */}
-      {/* <div dir={rtl ? "rtl" : "ltr"}> */}
-      <Component {...pageProps} />
-      {/* </div> */}
-      {/* </NextIntlProvider> */}
-    </ThemeProvider>
+    <CacheProvider value={cacheRtl}>
+      <ThemeProvider theme={theme}>
+        <NextIntlProvider messages={pageProps.messages}>
+          <div dir={rtl ? "rtl" : "ltr"}>
+            <Component {...pageProps} />
+          </div>
+        </NextIntlProvider>
+      </ThemeProvider>
+    </CacheProvider>
   );
 }
